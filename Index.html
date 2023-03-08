@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="Style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script>
+    function calc() {
+      var n1 = parseFloat(document.getElementById("n1").value);
+      var n2 = parseFloat(document.getElementById("n2").value);
+      var oper = document.getElementById("operator").value;
+      if (oper === "+") {
+        document.getElementById("result").value = n1 + n2;
+      }
+      if (oper === "-") {
+        document.getElementById("result").value = n1 - n2;
+      }
+      if (oper === "*") {
+        document.getElementById("result").value = n1 * n2;
+      }
+      if (oper === "÷") {
+        document.getElementById("result").value = n1 / n2;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="box">
+    <h1>Calculator</h1>
+    <form>
+      <input
+        class="io1"
+        placeholder="Enter First Number"
+        type="text"
+        id="n1"
+        required
+      />
+      <br />
+      <input
+        class="io2"
+        placeholder="Enter Second Number"
+        type="text"
+        id="n2"
+        required
+      /><br />
+      <select id="operator" class="op">
+        <option value="+">+ (Addition)</option>
+        <option value="-">- (subtraction)</option>
+        <option value="*">* (Multiplication)</option>
+        <option value="÷">÷ (Division)</option>
+      </select>
+      <br />
+      <button type="button" onclick="calc();">Submit</button>
+      <br />
+      <label for="result" class="label1">Your Result Is</label>
+      <input class="io3" type="text" id="result" disabled />
+    </form>
+  </div>
+  <div class="down-arrow"></div>
+  <footer class="footer">
+    <h1>Get In Touch</h1>
+    <div class="social">
+      <a href="https://www.instagram.com/prashanth_santhanaraman/?hl=en"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/prashanth-santhanaraman"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://mobile.twitter.com/prashanth_ozil"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <p class="copyright">Prashanth @ 2023</p>
+    </div>
+  </footer>
+</body>
